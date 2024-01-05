@@ -8,8 +8,8 @@ const LandingPage = () => {
   return (
     <div className="main">
       <div className="userInput">
-        <div>
-          <label for="emailid">Email</label>
+        <div className="ml-8">
+          <label for="emailid" className="epLabel">Email : </label>
           <input
             id="emailid"
             type="email"
@@ -17,11 +17,12 @@ const LandingPage = () => {
             placeholder="Enter the Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="inputs"
           />
         </div>
 
-        <div>
-          <label for="userPassword">Password</label>
+        <div className="">
+          <label for="userPassword" className="epLabel">Password : </label>
           <input
             id="userPassword"
             type="password"
@@ -29,14 +30,21 @@ const LandingPage = () => {
             placeholder="Enter the password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="inputs text-left"
           />
         </div>
-      </div>
 
-      <div>
-        <button className="p-2 rounded-lg bg-blue-600  border-solid border-2 border-black">
+        <div className="space-x-16">
+        <button className="py-2  px-6 rounded-lg bg-blue-600  border-solid border-2 border-black mt-4">
           Sign In
         </button>
+
+        <button className="py-2  px-6 rounded-lg bg-blue-600  border-solid border-2 border-black mt-4">
+          Sign Up
+        </button>
+      </div>
+
+      
       </div>
     </div>
   );
