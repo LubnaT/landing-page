@@ -1,0 +1,15 @@
+.main{
+   display: relative;
+   top: 50%;
+   left: 50%;
+   /* flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 5rem; */
+}
+.userInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
