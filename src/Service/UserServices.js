@@ -3,11 +3,18 @@ import axios from 'axios';
 class UserServices{
 
     userSignUpAdd(user){
-        return axios.post('/api/signup', user)
+        console.log(user);
+        return axios.post('http://localhost:8083/api/signup', user)
     }
 
     userSignInExist(user){
-        return axios.post('/api/signin', user)
+        console.log(user);
+        return axios.post('http://localhost:8083/api/signin', user)
+       
+    }
+
+    getAllUsers(){
+        return  axios.get("http://localhost:8083/api/users")
     }
 }
 export default new UserServices();
