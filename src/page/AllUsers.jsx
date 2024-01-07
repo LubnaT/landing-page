@@ -1,38 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import UserServices from '../Service/UserServices';
+import React from 'react';
+import "./landingpage.css";
 
-const AllUsers = ({userdetails}) => {
-    
-//   const [users, setUsers] = useState([]);
-
-//   useEffect(() => {
-//     // Fetch users data from the API when the component mounts
-//     UserServices.getAllUsers()
-//       .then((response) => setUsers(response.data))
-//       .catch((error) => console.error('Error fetching users:', error));
-//   }, []);
-
+const AllUsers = ({ userdetails }) => {
   return (
     <div>
-      <h1>User List</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Email</th>
-            <th>Password</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userdetails.map((user) => (
-            <tr key={user.userID}>
-              <td>{user.userID}</td>
-              <td>{user.userEmail}</td>
-              <td>{user.password}</td>
+      <h1 className="text-center mb-4">User List</h1>
+      <div className="">
+        <table className="min-w-full border ">
+          <thead>
+            <tr className="bg-gray-200">
+              <th className="tablecell">User ID</th>
+              <th className="tablecell">Email</th>
+              <th className="tablecell">Password</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {userdetails.map((user) => (
+              <tr key={user.userID} className="bg-white">
+                <td className="tablecell">{user.userID}</td>
+                <td className="tablecell">{user.userEmail}</td>
+                <td className="tablecell">{user.password}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
